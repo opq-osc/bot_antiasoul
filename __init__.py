@@ -1,17 +1,16 @@
-"""插件帮助信息"""
-from botoy import Action, GroupMsg, S
+"""嘉心糖滚出去"""
+import random
+from pathlib import Path
+
+from botoy import S
 from botoy import decorators as deco
 from botoy.contrib import plugin_receiver
 
-try:
-    # 如果需要用到单独插件测试运行，请这样处理项目中所有的导入操作
-    from .core import say_hello
-except ImportError:
-    from core import say_hello
+IMAGES = [str(i.absolute()) for i in (Path(__file__).parent / 'asoul').iterdir()]
 
 
 @plugin_receiver.group
+@deco.re_findall(r"(然然|嘉然|的捏)")
 @deco.ignore_botself
-def group(ctx: GroupMsg):
-    S.text(say_hello(ctx.FromNickName))
-    Action.from_ctx(ctx)
+def group(ctx):
+    S.bind(ctx).image(random.choice(IMAGES), '嘉❤糖滚出去', type=S.TYPE_PATH)

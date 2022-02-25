@@ -1,26 +1,4 @@
-# botoy-plugin-template
-
-botoy 插件模板
-
-## 使用
-
-用命令行工具:
-
-`gh repo create bot_这里中文改成你的插件名 -p opq-osc/botoy-plugin-template`
-
-或
-
-直接点击这个仓库主页上的`Use this template`
-
-## 说明
-
-结构很简单，按需删减和增加自己需要的东西
-
-一般只需要修改`core.py`, `__init__.py`, `pip.txt`
-
----
-
-# bot\_插件名
+# bot_antiasoul
 
 ## 安装
 
@@ -28,8 +6,10 @@ botoy 插件模板
 
 ## 简介
 
-<!-- 插件描述信息 -->
+原创地址：[qiandeng1/antiasoul](https://github.com/qiandeng1/antiasoul)
 
 ## 帮助
 
-<!-- 插件使用帮助 -->
+机器人会自动识别，嘉然，然然，捏等关键字
+
+你也可以通过修改关键词和图库来指定其他的
